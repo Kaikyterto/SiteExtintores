@@ -1,0 +1,76 @@
+              <svg
+  width="70"
+  height="100"
+  viewBox="0 0 120 200"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Mangueira -->
+  <path
+    d="M80 30 C110 20, 110 80, 90 90"
+    fill="none"
+    stroke="#222"
+    stroke-width="6"
+    stroke-linecap="round"
+  />
+
+  <!-- Corpo do extintor -->
+  <rect
+    x="25"
+    y="40"
+    width="70"
+    height="120"
+    rx="20"
+    fill="#C8102E"
+  />
+
+  <!-- Rótulo -->
+  <rect
+    x="35"
+    y="80"
+    width="50"
+    height="40"
+    rx="6"
+    fill="#ffffff"
+  />
+
+  <!-- Texto do rótulo -->
+  <text
+    x="60"
+    y="105"
+    text-anchor="middle"
+    font-size="14"
+    font-weight="bold"
+    fill="#C8102E"
+  >
+    TESTE
+  </text>
+
+  <!-- Gargalo -->
+  <rect
+    x="45"
+    y="20"
+    width="30"
+    height="25"
+    rx="6"
+    fill="#444"
+  />
+
+  <!-- Alavanca -->
+  <rect
+    x="30"
+    y="10"
+    width="60"
+    height="10"
+    rx="5"
+    fill="#222"
+  />
+
+  <!-- Base -->
+  <ellipse
+    cx="60"
+    cy="165"
+    rx="35"
+    ry="10"
+    fill="#8B0F23"
+  />
+</svg>
