@@ -7,25 +7,84 @@ const slidesToShow = 3;
 const numPages = Math.ceil(slides.length / slidesToShow);
 let currentPage = 0;
 
+function getSlideWidth() {
+  return slides[0].getBoundingClientRect().width;
+}
+
 function update() {
   const newTransform = -currentPage * 100;
   track.style.transform = `translateX(${newTransform}%)`;
 }
 
 nextBtn.addEventListener("click", () => {
-  currentPage++;
-  if (currentPage >= numPages) {
-    currentPage = 0;
+
+  if (currentPage + 1 >= numPages) {
+    const clones = slides
+      .slice(0, slidesToShow)
+      .map(slide => slide.cloneNode(true));
+
+    for (let i = 0; i < slidesToShow; i++) {
+      slides[i].remove();
+    }
+
+    slides.splice(0, slidesToShow);
+
+    clones.forEach(clone => {
+      track.appendChild(clone);
+      slides.push(clone);
+    });
+
+    track.style.transition = "none";              
+    track.style.transform = `translateX(-100%)`;  
+    void track.offsetWidth;                       
+
+    track.style.transition = "transform 0.8s";    
+    track.style.transform = `translateX(-200%)`;
+    console.log(currentPage) 
+  } else {
+    currentPage++;
+    update();
+    console.log(currentPage)
   }
-  update();
 });
 
+
+
 prevBtn.addEventListener("click", () => {
-  currentPage--;
-  if (currentPage < 0) {
-    currentPage = numPages - 1;
+
+  if (currentPage === 0) {
+
+    const clones = slides
+      .slice(-slidesToShow)
+      .map(slide => slide.cloneNode(true)).reverse();
+
+    slides
+      .slice(-slidesToShow)
+      .forEach(slide => slide.remove());
+
+    slides.splice(-slidesToShow, slidesToShow);
+
+
+    clones.forEach(clone => {
+      track.prepend(clone);
+      slides.unshift(clone);
+    });
+
+
+    track.style.transition = "none";
+    track.style.transform = `translateX(-100%)`;
+    void track.offsetWidth;
+
+    track.style.transition = "transform 0.8s";
+    track.style.transform = `translateX(0%)`;
+    console.log(currentPage)
+
+  } else {
+    currentPage--;
+    update();
   }
-  update();
+
+  console.log( currentPage);
 });
 
 // Initialize the carousel position
