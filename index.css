@@ -86,26 +86,31 @@
 
   .carrossel {
     position: relative;
-    width: 95vw;
+    width: 90vw;
+    max-width: 1200px;
     overflow: hidden;
-    border-radius: 14px;
-    
+    border-radius: 20px;
   }
   
   .track {
     display: flex;
     transition: transform 0.5s ease;
+    gap: 2%;
   }
   
   .slide {
-    min-width: 100%;
-    height: 300px;
+    min-width: 32%;
+    flex-shrink: 0;
+    height: 350px;
     display: flex;
+    border-radius:20px;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
     color: #fff;
     background: var(--gradient-light);
+    box-shadow: 5px 10px 6px 0px rgba(0, 0, 0, 0.363);
+    
   }
   
   .btn {
@@ -124,10 +129,44 @@
   .prev { left: 10px; }
   .next { right: 10px; }
   
+  .carrosselpartners {
+    margin: 0 auto;
+    width: 90vw;
+    max-width: 1200px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .carrosselpartners::-webkit-scrollbar {
+    display: none;
+  }
+
+  .group{
+    display: inline-flex;
+    align-items: center;
+    gap: 1em;
+    animation: spin 10s infinite linear;
+    padding-right: 1em;
+  }
+
+  .card{
+    flex: 0 0 4em;
+    height: 5em;
+    padding: 1em;
+    border-radius: .2em;
+    text-align: center;
+    align-content: center;
+    
+  }
+@keyframes spin{
+  from {transform: translateX(0);}
+  to {transform: translateX(-45em);}
+}
+
   .produtos {
     position: relative;
     width: 100vw;
-    height: 400px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,11 +181,11 @@
     content: "";
     position: absolute;
     inset: 0; /* ocupa todo o espaço */
-    background-image: url("./bombeiro.JPEG");
+    background-image: url("assets/fotos-redimensionadas/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    filter: grayscale(50%);
+    filter: grayscale(45%);
     opacity: 0.8; 
     z-index: -1;
   }
