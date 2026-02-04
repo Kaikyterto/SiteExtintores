@@ -89,3 +89,4 @@ prevBtn.addEventListener("click", () => {
 
 // Initialize the carousel position
 update();
+
