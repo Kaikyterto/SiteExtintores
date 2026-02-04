@@ -127,18 +127,67 @@
   }
 
   #slide1{
-    background-image: url("./assets/fotos-redimensionadas/extintores435.png");
+    background-image: url("assets/fotos-redimensionadas/recarga.jpg");
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   #slide2{
-    background-image: url("./assets/fotos-redimensionadas/diversos370.png");
+    background-image: url("assets/fotos-redimensionadas/manometro300.png");
     background-size: cover;
     background-repeat: no-repeat;
+
+  }
+
+  #slide3{
+    background-image: url("assets/fotos-redimensionadas/sistemaHidraulico.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+
+  #slide4{
+    background-image: url("assets/fotos-redimensionadas/alarme.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
   }
   
+  #slide5{
+    background-image: url("assets/fotos-redimensionadas/ppci.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
   
+  #slide6{
+    background-image: url("assets/fotos-redimensionadas/Equipamentos-de-incendio.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+
+  #slide7{
+    background-image: url("assets/fotos-redimensionadas/inspecao-mangueira\ de\ incendio.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+
+  #slide8{
+    background-image: url("assets/fotos-redimensionadas/treinamento.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+
+  #slide9{
+    background-image: url("assets/fotos-redimensionadas/pintura.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+
   .btn {
     position: absolute;
     top: 50%;
