@@ -9,6 +9,7 @@
     --secundary:#FFFFFF;
     --gradient-dark:linear-gradient(135deg, #c8102e, #e53935);
     --gradient-light:linear-gradient(135deg, #e53935 0%, #c62828 100%);
+    --fire:linear-gradient(135deg,#dc2626 0%, #f97316 50%, #fbbf24);
     --radius: 14px;
   }
 
@@ -16,6 +17,7 @@
     font-family: 'DM Sans', sans-serif;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    
   }
   
   .header {
@@ -84,6 +86,7 @@
 
   .nav a:hover {
     color: var(--gradient-dark);
+    
   }
   
   .nav a:hover::after {
@@ -267,9 +270,25 @@
   
   .prev { left: 10px; }
   .next { right: 10px; }
+
+.parceiros{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 35%;
+  
+}
   
 .parceiros h3 {
   margin-bottom: 2rem;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 1.5em;
+  
+  
+  
+  
   }
 
   /*Configurações do slider parceiria*/
@@ -336,8 +355,8 @@
 
   .hero span {
     color: #ff0000;
-    animation: attention 1s infinite; 
-    transition: all 1s ease;
+    animation: attention 2s infinite; 
+    transition: all 2s ease;
   }
 
 
@@ -350,9 +369,29 @@
     align-items: center;
     flex-direction: column;
     gap: 50px;
-    color: var(--secundary);
     z-index: 1; 
     font-family: 'Playfair Display', serif;
+  }
+
+  .produtos .elementos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    padding-bottom: 20px;
+  }
+
+  .produtos .div-produto{
+    background: var(--gradient-dark);
+    border-radius: var(--radius);
+    animation: brilho 2s infinite;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    align-items: center;
+  
   }
   
   .produtos::before {
@@ -520,9 +559,30 @@
   }
   50% {
     opacity: 1;
+    text-shadow:
+    0 0 5px rgba(255, 0, 0, 0.8),
+    0 0 10px rgba(255, 0, 0, 0.8),
+    0 0 20px rgba(255, 40, 40, 0.9),
+    0 0 40px rgba(255, 80, 80, 0.8)
   }
   100% {
     opacity: 0.5;
+  }
+}
+
+@keyframes brilho {
+  0% {
+  }
+  50% {
+    transform: translateY(-5px);
+    box-shadow:
+    0 0 5px rgba(255, 0, 0, 0.8),
+    0 0 10px rgba(255, 0, 0, 0.8),
+    0 0 20px rgba(255, 40, 40, 0.9),
+    0 0 40px rgba(255, 80, 80, 0.8)
+  }
+  100% {
+
   }
 }
  
