@@ -5,7 +5,7 @@
   }
 
   :root{
-    --primary:#C8102E;
+    --primary:#8B0000;
     --secundary:#FFFFFF;
     --gradient-dark:linear-gradient(135deg, #c8102e, #e53935);
     --gradient-light:linear-gradient(135deg, #e53935 0%, #c62828 100%);
@@ -23,9 +23,10 @@
     width: 100%;
     top: 0;
     z-index: 100;
-    background: var(--gradient-dark);
+    background: var(--primary);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 1rem;
   }
 
   .header-content {
@@ -47,9 +48,13 @@
   .nav a {
     position: relative;
     text-decoration: none;
-    color: var(--secundary);
+    color: var(--primary);
     font-weight: 500;
-    transition: transform 0.3s ease;
+    transition: transform 1s ease;
+    padding: 0.5em 0.8em 0.5em 0.8em;
+    background-color: #fff;
+    border-radius: var(--radius);
+    
   }
 
   .nav a::after {
@@ -60,15 +65,16 @@
   
     width: 100%;
     height: 2px;
-    background: #FFC107;
+    background: var(--secundary);;
   
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.4s ease;
+    
   }
 
   .nav a:hover {
-    color: #FFC107;
+    color: var(--gradient-dark);
   }
   
   .nav a:hover::after {
@@ -84,8 +90,8 @@
     margin-top: 120px;
   }
 
-  #big-icon-whatsapp{
-    display: flex;
+  #big-icon-whatsapp {
+    display: flex ;
     justify-content: center;
     align-items: center;
     width: 80px;
@@ -94,6 +100,55 @@
     left: 94%;
     top: 80%;
     z-index: 2;
+    border-radius: 100%;
+  }
+
+  #big-icon-whatsapp.wrapper {
+    width: 80px !important;
+    height: 80px !important;
+    padding: 0 !important;
+    display: flex !important;
+  }
+  
+  #big-icon-whatsapp .icon {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    box-shadow: none;
+    background: var(--secundary); 
+  }  
+  
+
+  #big-icon-whatsapp li {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #big-icon-whatsapp li a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #big-icon-whatsapp li a svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #big-icon-whatsapp::before{
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    animation: pulse 1.5s infinite; 
+    transition: all 0.3s ease;
+    border-radius: 100%;
   }
 
   .carrossel {
@@ -238,15 +293,6 @@
     border-radius: 7px;
   }
 
-  @keyframes autoRun{
-    from{
-      transform: translateX(0);
-    }
-    to{
-      transform: translateX(calc(((var(--width) + 20px) * var(--quantity)) * -1));
-    }
-  }
-
 .slider:hover .list{
     animation-play-state: paused!important;
 }
@@ -262,6 +308,26 @@
     z-index: 2;
   }
 
+  .hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5em;
+    border-radius: var(--radius);
+    background: var(--primary);
+    color: var(--secundary);
+    width: 85%;
+  }
+
+  .hero span {
+    color: #FF0000;
+    animation: attention 1s infinite; 
+    transition: all 1s ease;
+  }
+
+
   .produtos {
     position: relative;
     width: 100vw;
@@ -273,6 +339,7 @@
     gap: 50px;
     color: var(--secundary);
     z-index: 1; 
+    font-family: 'Playfair Display', serif;
   }
   
   .produtos::before {
@@ -290,7 +357,7 @@
   }
 
   .footer {
-    background: var(--gradient-dark);
+    background: var(--primary);
     padding: 2rem;
     text-align: center;
   }
@@ -412,5 +479,37 @@
     color: inherit;
   }
 
-  
-  
+  @keyframes autoRun{
+    from{
+      transform: translateX(0);
+    }
+    to{
+      transform: translateX(calc(((var(--width) + 20px) * var(--quantity)) * -1));
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 30px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+    
+}
+
+@keyframes attention {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+ 
