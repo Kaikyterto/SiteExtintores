@@ -10,7 +10,7 @@
     --gradient-dark:linear-gradient(135deg, #c8102e, #e53935);
     --gradient-light:linear-gradient(135deg, #e53935 0%, #c62828 100%);
     --fire:linear-gradient(135deg,#dc2626 0%, #f97316 50%, #fbbf24);
-    --radius: 14px;
+    --radius: 24px;
   }
 
   html, body {
@@ -23,6 +23,8 @@
   .header {
     background: rgba(139, 0, 0, 0.85);
     backdrop-filter: blur(14px);
+    position: relative;
+    z-index: 1000;
   }
   
   .header .logo img {
@@ -150,52 +152,12 @@
   .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
   }
-
-  /* Mobile Styles */
-  @media (max-width: 768px) {
-    .hamburger {
-      display: flex;
-    }
-
-    .nav {
-      position: absolute;
-      top: 100%;
-      right: 2rem;
-      width: auto;
-      background: transparent;
-      flex-direction: column;
-      gap: 0.5rem;
-      padding: 0.5rem 0;
-      transform: translateY(-10px);
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-      z-index: 9999;
-    }
-
-    .nav.active {
-      transform: translateY(0);
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .nav a {
-      padding: 0.5rem 1rem;
-      border: none;
-      font-size: 0.9rem;
-      background: var(--primary);
-      color: var(--secundary);
-      border-radius: var(--radius);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    }
-  }
   
-
   .section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 120px;
+    gap: 100px;
     margin-top: 120px;
   }
 
@@ -206,8 +168,8 @@
     width: 60px;
     height: 60px;
     position: fixed;
-    left: 95%;
-    top: 90%;
+    left: 80%;
+    top: 88%;
     z-index: 2;
     border-radius: 100%;
   }
@@ -472,24 +434,37 @@
     z-index: 2;
   }
 
-  .hero{
+  .hero {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--primary);
+    border-radius: var(--radius);
+    padding: 2.5em;
+    color: var(--secundary);
+  }
+  
+  .hero span {
+    display: inline-flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    gap: 10px;
-    padding: 5em;
-    border-radius: var(--radius);
-    background: var(--primary);
-    color: var(--secundary);
-    width: 85%;
-  }
-
-  .hero span {
+  
+    margin-top: 1.5rem;
+    width: fit-content;
+    max-width: 100%;
+  
     color: #ff0000;
-    animation: attention 2s infinite; 
-    transition: all 2s ease;
+    animation: attention 2s infinite;
+    transition: all 0.3s ease;
+  
+    border: 5px solid rgba(220, 38, 38, 0.25);
+    border-radius: var(--radius);
+    padding: 0.6em 1.2em;
+  
+    text-align: center;
   }
+  
 
 
   .produtos {
@@ -513,10 +488,11 @@
     width: 100%;
     height: 50%;
     padding-bottom: 20px;
+    padding-top: 20px;
   }
 
   .produtos .div-produto{
-    background: var(--gradient-dark);
+    background: var(--primary);
     border-radius: var(--radius);
     display: flex;
     flex-direction: column;
@@ -569,10 +545,101 @@
     z-index: -1;
   }
 
+  .div-produto a {
+    position: relative;
+    text-decoration: none;
+    color: var(--secundary);
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    border-radius: var(--radius);
+    box-shadow: #000 0px 2px 3px 0px;
+    width: 100%;
+    margin: 10px;
+    background-color: var(--primary);
+  }
+
+  .div-produto a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    width: 100%;
+    height: 3px;
+    background: var(--fire);
+    border-radius: 999px;
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .div-produto a:hover {
+    color: #fff;
+    text-shadow:
+      0 0 8px rgba(255, 0, 0, 0.9),
+      0 0 16px rgba(255, 60, 60, 0.9),
+      0 0 32px rgba(255, 120, 120, 0.8);
+      box-shadow:
+    0 0 5px rgba(255, 0, 0, 0.8),
+    0 0 10px rgba(255, 0, 0, 0.8),
+    0 0 20px rgba(255, 40, 40, 0.9),
+    0 0 40px rgba(255, 80, 80, 0.8);
+      
+  }
+  
+  .div-produto a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+    box-shadow:
+      0 0 6px rgba(255, 0, 0, 0.9),
+      0 0 16px rgba(255, 60, 60, 0.9),
+      0 0 32px rgba(255, 120, 120, 0.8);
+  }
+  
+  .div-produto a.active {
+    color: #fff;
+    text-shadow:
+      0 0 8px rgba(255, 0, 0, 0.9),
+      0 0 16px rgba(255, 60, 60, 0.9),
+      0 0 32px rgba(255, 120, 120, 0.8);
+  }
+  
+  .div-produto a.active::after {
+    transform: translateX(-50%) scaleX(1);
+    box-shadow:
+      0 0 6px rgba(255, 0, 0, 0.9),
+      0 0 16px rgba(255, 60, 60, 0.9),
+      0 0 32px rgba(255, 120, 120, 0.8);
+  }
+
+
+  .about {
+    font-family: 'Playfair Display', Georgia, serif;
+    border-radius: 24px;
+    padding: 48px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+    background: var(--primary);
+    border: 5px solid rgba(220, 38, 38, 0.25);
+    margin-bottom: 5em;
+    color: var(--secundary);
+  }
+
+  .about h1 {
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .about p{
+    font-size: 18px;
+  }
+
   .footer {
     background: var(--primary);
     padding: 2rem;
     text-align: center;
+   
+  }
+
+  .footer-content h2{
+    color: var(--secundary);
+    margin-bottom: 0.5rem;
   }
   
   .footer-logo {
@@ -746,4 +813,68 @@
 
   }
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    right: 2rem;
+    width: auto;
+    background: transparent;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 9999;
+  }
+
+  .nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav a {
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: 0.9rem;
+    background: var(--primary);
+    color: var(--secundary);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+
+  .produtos .elementos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
  
+  .produtos {
+    height: auto;
+  }
+  
+  .produtos .div-produto {
+    max-width: 180px; 
+    flex: 1 1 180px;
+  }
+
+  .hero {
+    width: 100%;
+    padding: 3em 1.5em;
+  }
+  
+  .hero span {
+    font-size: 1.2rem;
+  }
+  
+}
