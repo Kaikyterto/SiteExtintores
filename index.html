@@ -10,16 +10,21 @@
 <body>
     <header class="header">
         <div class="header-content">
-            <div = "logo-container">
+            <div class="logo-container">
               <a href="#" class="logo">
                   <img src="assets/logos redimensionadas/logo branca.jpg" alt="">
                 </a>
             </div>
-            <nav class="nav">
-              <a href="">Serviços</a>
-              <a href="">Equipamentos</a>
-              <a href="">Sobre</a>
-              <a href="">Fale conosco</a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="nav" id="nav">
+                <a href="">Serviços</a>
+                <a href="">Equipamentos</a>
+                <a href="">Sobre</a>
+                <a href="">Fale conosco</a>
             </nav>
         </div>
     </header>
@@ -45,15 +50,60 @@
     </div>
         <div class="carrossel" id="carrossel">
             <div class="track">
-              <div class="slide" id="slide1"></div>
-              <div class="slide" id="slide2"></div>
-              <div class="slide" id="slide3"></div>
-              <div class="slide" id="slide4"></div>
-              <div class="slide" id="slide5"></div>
-              <div class="slide" id="slide6"></div>
-              <div class="slide" id="slide7"></div>
-              <div class="slide" id="slide8"></div>
-              <div class="slide" id="slide9"></div>
+              <div class="slide" id="slide1">
+                <div class="overlay">
+                  <div class="title">Recarga de Extintores</div>
+                  <div class="description">Serviço essencial para manter a eficácia dos extintores, garantindo segurança contra incêndios.</div>
+                </div>
+              </div>
+              <div class="slide" id="slide2">
+                <div class="overlay">
+                  <div class="title">Manômetro</div>
+                  <div class="description">Verificação e calibração de manômetros para sistemas de combate a incêndio.</div>
+                </div>
+              </div>
+              <div class="slide" id="slide3">
+                <div class="overlay">
+                  <div class="title">Sistema Hidráulico</div>
+                  <div class="description">Instalação e manutenção de sistemas hidráulicos para prevenção de incêndios.</div>
+                </div>
+              </div>
+              <div class="slide" id="slide4">
+                <div class="overlay">
+                  <div class="title">Alarme</div>
+                  <div class="description">Sistemas de alarme para detecção precoce de incêndios e alertas de emergência.</div>
+                </div>
+              </div>
+              <div class="slide" id="slide5">
+                <div class="overlay">
+                  <div class="title">PPCI</div>
+                  <div class="description">Plano de Prevenção Contra Incêndio, essencial para conformidade e segurança.</div>
+                </div>
+              </div>
+              <div class="slide" id="slide6">
+                <div class="overlay">
+                  <div class="title">Equipamentos de Incêndio</div>
+                  <div class="description">Fornecimento e instalação de equipamentos especializados em combate a incêndios.</div>
+                </div>
+              </div>
+              <div class="slide" id="slide7">
+                <div class="overlay">
+                  <div class="title">Inspeção de Mangueira</div>
+                  <div class="description">Verificação periódica das mangueiras de incêndio para garantir funcionalidade.</div>
+                </div>
+              </div>
+              <div class="slide" id="slide8">
+                <div class="overlay">
+                  <div class="title">Treinamento</div>
+                  <div class="description">Cursos e treinamentos para capacitação em prevenção e combate a incêndios.</div>
+                </div>
+              </div>
+              <div class="slide" id="slide9">
+                <div class="overlay">
+                  <div class="title">Pintura</div>
+                  <div class="description">Serviços de pintura especializada para sinalização e identificação de equipamentos.</div>
+                </div>
+              </div>
             </div>
             <button class="btn prev">‹</button>
             <button class="btn next">›</button>
@@ -94,27 +144,55 @@
                     </div>
 
         <div class="produtos">
+  <div class="elementos">
+    
+    <div class="div-produto">
+      <svg xmlns="http://www.w3.org/2000/svg" height="100" width="100" viewBox="0 -960 960 960" fill="#1f1f1f">
+        <path d="M279-240v-241l10-39h380l10 39v241H279Zm81-200v120h240v-120H360Zm147.5-292.5Q519-744 519-761t-11.5-28.5Q496-801 479-801t-28.5 11.5Q439-778 439-761t11.5 28.5Q462-721 479-721t28.5-11.5ZM640-738v-46l-42 8q1 4 1 7.5v15q0 3.5-1 7.5l42 8ZM279-481q0-63 35-113t91-72q-11-8-19.5-18.5T371-708l-171-33v-40l171-33q15-30 43.5-49t64.5-19q23 0 44 9t37 23l160-31v240l-160-31q-2 2-3.5 3t-3.5 3q56 22 91 72t35 113h-79q0-50-35-84.5T480-600q-50 0-85 34.5T360-481h-81Zm80 401q-33 0-56.5-23.5T279-160v-80h81v80h240v-80h79v80q0 33-23.5 56.5T599-80H359Z"/>
+      </svg>
+      Extintores
+    </div>
+
+    <div class="div-produto">
+      <svg xmlns="http://www.w3.org/2000/svg" height="100" width="100" viewBox="0 0 24 24" fill="#000000">
+        <path d="M12 2C7.58 2 4 5.58 4 10v7H2v2h20v-2h-2v-7c0-4.42-3.58-8-8-8zm0 18c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm0-16c3.31 0 6 2.69 6 6v7H6v-7c0-3.31 2.69-6 6-6z"/>
+      </svg>
+      Alarmes
+    </div>
+
+    <div class="div-produto">
+      <svg xmlns="http://www.w3.org/2000/svg" height="100" width="100" viewBox="0 0 24 24" fill="#000000">
+        <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z" fill="none" stroke="#000000" stroke-width="1.5"/>
+        <path d="M12 7c-2.76 0-5 2.24-5 5 0 1.66 0 3 5 7 5-4 5-5.34 5-7 0-2.76-2.24-5-5-5z"/>
+      </svg>
+      Sinalização
+    </div>
+
+    <div class="div-produto">
+      <svg xmlns="http://www.w3.org/2000/svg" height="100" width="100" viewBox="0 0 24 24" fill="#000000">
+        <path d="M12 2c-4.97 0-9 4.03-9 9 0 4.97 4.03 9 9 9s9-4.03 9-9h-2c0 3.87-3.13 7-7 7s-7-3.13-7-7 3.13-7 7-7v2l4-3-4-3v2zm6 7c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 2c0-.55.45-1 1-1s1 .45 1 1-.45 1-1 1-1-.45-1-1zm-6-2c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+      </svg>
+      Mangueiras
+    </div>
+
+    <div class="div-produto">
+      <svg xmlns="http://www.w3.org/2000/svg" height="100" width="100" viewBox="0 0 24 24" fill="#000000">
+        <path d="M19 12h-2V8h2V6h-2.35C16.12 3.68 14.28 2 12 2S7.88 3.68 7.35 6H5v2h2v4H5v2h2v7h3v-3h4v3h3v-7h-2v-2zm-3-2H8V8h8v2z"/>
+      </svg>
+      Hidrantes
+    </div>
+
+    <div class="div-produto">
+      <svg xmlns="http://www.w3.org/2000/svg" height="100" width="100" viewBox="0 0 24 24" fill="#000000">
+        <path d="M4 20h16v2H4v-2zm2.86-2l2.5-8H6l1.2-4h9.6l1.2 4h-3.36l2.5 8H6.86zm7.25-10l-.6-2h-3.02l-.6 2h4.22z"/>
+      </svg>
+      Suportes
+    </div>
+
+  </div>
+</div>
           
-          <div class="elementos">
-          <div class="div-produto">
-            <svg xmlns="http://www.w3.org/2000/svg" height="150" widht= "150" viewBox="0 -960 960 960"  fill="#1f1f1f"><path d="M279-240v-241l10-39h380l10 39v241H279Zm81-200v120h240v-120H360Zm147.5-292.5Q519-744 519-761t-11.5-28.5Q496-801 479-801t-28.5 11.5Q439-778 439-761t11.5 28.5Q462-721 479-721t28.5-11.5ZM640-738v-46l-42 8q1 4 1 7.5v15q0 3.5-1 7.5l42 8ZM279-481q0-63 35-113t91-72q-11-8-19.5-18.5T371-708l-171-33v-40l171-33q15-30 43.5-49t64.5-19q23 0 44 9t37 23l160-31v240l-160-31q-2 2-3.5 3t-3.5 3q56 22 91 72t35 113h-79q0-50-35-84.5T480-600q-50 0-85 34.5T360-481h-81Zm80 401q-33 0-56.5-23.5T279-160v-80h81v80h240v-80h79v80q0 33-23.5 56.5T599-80H359Z"/></svg>
-          Recarga de extintores
-          </div>
-          <div class="div-produto">
-            <svg xmlns="http://www.w3.org/2000/svg" height="150" widht= "150" viewBox="0 -960 960 960" fill="#000000"><path d="m536-84-56-56 142-142-340-340-142 142-56-56 56-58-56-56 84-84-56-58 56-56 58 56 84-84 56 56 58-56 56 56-142 142 340 340 142-142 56 56-56 58 56 56-84 84 56 58-56 56-58-56-84 84-56-56-58 56Z"/></svg>
-            Treinamentos
-          </div>
-          <div class="div-produto">
-            <svg xmlns="http://www.w3.org/2000/svg" height="150" widht= "150" viewBox="0 -960 960 960"  fill="#000000"><path d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z"/></svg>
-            Manutenção
-          </div>
-          <div class="div-produto">
-            <svg xmlns="http://www.w3.org/2000/svg" height="150" widht= "150" viewBox="0 -960 960 960"  fill="#000000"><path d="M240-400q0 52 21 98.5t60 81.5q-1-5-1-9v-9q0-32 12-60t35-51l113-111 113 111q23 23 35 51t12 60v9q0 4-1 9 39-35 60-81.5t21-98.5q0-50-18.5-94.5T648-574q-20 13-42 19.5t-45 6.5q-62 0-107.5-41T401-690q-39 33-69 68.5t-50.5 72Q261-513 250.5-475T240-400Zm240 52-57 56q-11 11-17 25t-6 29q0 32 23.5 55t56.5 23q33 0 56.5-23t23.5-55q0-16-6-29.5T537-292l-57-56Zm0-492v132q0 34 23.5 57t57.5 23q18 0 33.5-7.5T622-658l18-22q74 42 117 117t43 163q0 134-93 227T480-80q-134 0-227-93t-93-227q0-129 86.5-245T480-840Z"/></svg>
-            Sistema de detecção de alarmes e incêndio
-          </div>
-        </div>
-          
-          </div>
+      </div>
           
     </section>
 
@@ -192,4 +270,13 @@
 </body>
 <script src="carrosel.js"></script>
 <script src="slider.js" defer></script>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('nav');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    nav.classList.toggle('active');
+  });
+</script>
 </html>
