@@ -176,7 +176,7 @@
     flex-direction: column;
     align-items: center;
     gap: 100px;
-    margin-top: 120px;
+    margin-top: 50px;
   }
 
   #big-icon-whatsapp {
@@ -186,9 +186,11 @@
     width: 60px;
     height: 60px;
     position: fixed;
-    left: 80%;
-    top: 88%;
-    z-index: 2;
+    left: auto;
+    top: auto;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
     border-radius: 100%;
   }
 
@@ -249,6 +251,13 @@
     z-index: 1;
   }
   
+.Services h1{
+    margin-bottom: 1.1rem;
+    font-weight: 600;
+    font-size: 1.5em;
+  text-align: center;
+  }
+
   .track {
     display: flex;
     transition: transform 0.8s ease;
@@ -670,23 +679,46 @@
 
 
   .about {
-    font-family: 'Playfair Display', Georgia, serif;
-    border-radius: 24px;
-    padding: 48px;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
-    background: var(--primary);
-    border: 5px solid rgba(220, 38, 38, 0.25);
-    margin-bottom: 5em;
-    color: var(--secundary);
-  }
+  font-family: 'Playfair Display', Georgia, serif;
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+  background: var(--primary);
+  border: 5px solid rgba(220, 38, 38, 0.25);
+  margin-bottom: 5em;
+  color: var(--secundary);
+  display: grid;
+  grid-template-columns: auto 1fr; 
+  grid-template-rows: auto auto; 
+  column-gap: 30px; 
+  align-items: start;
+}
+
+  .about-image {
+  grid-column: 1;
+  grid-row: 1 / span 2; 
+  align-self: center; 
+  min-height: 200px;
+}
+
+  .about-content {
+  grid-column: 2;
+  grid-row: 2;
+}
 
   .about h1 {
-    font-size: 32px;
-    font-weight: 600;
-  }
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 32px;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
 
   .about p{
     font-size: 18px;
+    text-align: justify;
   }
 
   .footer {
@@ -800,8 +832,8 @@
   }
 
   .wrapper .whatsapp:hover,
-.wrapper .whatsapp:hover .tooltip,
-.wrapper .whatsapp:hover .tooltip::before {
+  .wrapper .whatsapp:hover .tooltip,
+  .wrapper .whatsapp:hover .tooltip::before {
   background: #fff;
   color: #25d366;
 }
@@ -879,6 +911,18 @@
     display: flex;
   }
 
+  #big-icon-whatsapp {
+    right: 15px; 
+    bottom: 15px;
+    width: 35px; 
+    height: 35px;
+  }
+
+#big-icon-whatsapp.wrapper {
+    width: 49px !important;
+    height: 49px !important;
+  }
+
   .nav {
     position: absolute;
     top: 100%;
@@ -917,13 +961,13 @@
     justify-content: center;
     gap: 20px;
   }
- 
+
   .produtos {
     height: auto;
   }
-  
+
   .produtos .div-produto {
-    max-width: 180px; 
+    max-width: 180px;
     flex: 1 1 180px;
   }
 
@@ -931,7 +975,7 @@
     width: 100%;
     padding: 3em 1.5em;
   }
-  
+
   .hero span {
     font-size: 1.2rem;
   }
@@ -943,25 +987,65 @@
   .slide .description {
     font-size: 0.7rem;
   }
-  
+
+  .about {
+    display: block; 
+    padding: 24px;
+    position: relative;
+  }
+
+  .about-image {
+    float: left; 
+    width: 40%;
+    max-width: 140px;
+    margin-top: 40px; 
+    margin-right: 15px; 
+    margin-bottom: 0;
+    padding: 0;
+    line-height: 0;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+  }
+
+  .about-content {
+    display: block;
+  }
+
+  .about h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 18px;
+    width: 100%;
+  }
+
+  .about p {
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.5;
+  }
+
   @media (hover: none) and (pointer: coarse) {
-    /* Remove efeito hover no mobile */
+    
     .slide:hover .overlay {
       height: 50px;
     }
-  
+
     .slide:hover .description {
       opacity: 0;
     }
-  
-    /* Efeito ao TOCAR */
+
     .slide:active .overlay {
       height: 175px;
     }
-  
+
     .slide:active .description {
       opacity: 1;
     }
   }
-  
+
 }
