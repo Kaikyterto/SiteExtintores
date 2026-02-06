@@ -885,4 +885,24 @@
     font-size: 0.7rem;
   }
   
+  @media (hover: none) and (pointer: coarse) {
+    /* Remove efeito hover no mobile */
+    .slide:hover .overlay {
+      height: 50px;
+    }
+  
+    .slide:hover .description {
+      opacity: 0;
+    }
+  
+    /* Efeito ao TOCAR */
+    .slide:active .overlay {
+      height: 175px;
+    }
+  
+    .slide:active .description {
+      opacity: 1;
+    }
+  }
+  
 }
