@@ -125,6 +125,24 @@
       0 0 32px rgba(255, 120, 120, 0.8);
   }
 
+  .nav a.fale-conosco {
+    background: #25d366;
+    color: #fff;
+  }
+
+  .nav a.fale-conosco::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+   width: 100%;
+    height: 100%;
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    animation: pulse 1.5s infinite;
+    transition: all 0.3s ease;
+    border-radius: inherit;
+ }
+
   /* Hamburger Menu Styles */
   .hamburger {
     display: none;
@@ -379,10 +397,7 @@
   color: var(--primary);
   font-weight: 600;
   font-size: 1.5em;
-  
-  
-  
-  
+
   }
 
   /*Configurações do slider parceiria*/
@@ -454,7 +469,7 @@
     width: fit-content;
     max-width: 100%;
   
-    background-color: #ff0000;
+    background-color: #25d366;
     color: var(--secundary);
     animation: brilho 2s infinite;
     transition: all 0.3s ease;
@@ -466,7 +481,6 @@
   }
   
 
-
   .produtos {
     position: relative;
     width: 100vw;
@@ -476,8 +490,20 @@
     align-items: center;
     flex-direction: column;
     gap: 50px;
-    z-index: 1; 
+    z-index: 1;
     font-family: 'Playfair Display', serif;
+  }
+
+  .produtos h2 {
+    margin-bottom: -47px;
+    color: var(--secundary);
+    font-weight: bold;
+  }
+
+ .produtos h3 {
+    margin-bottom: -25px;
+    color: var(--secundary);
+    font-weight: bold;
   }
 
   .produtos .elementos {
@@ -498,8 +524,33 @@
     flex-direction: column;
     width: 12%;
     align-items: center;
-
+    gap: 10px;
   }
+
+.box-info {
+  background: var(--primary);
+  border-radius: var(--radius);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0; 
+  color: var(--secundary);
+  box-shadow: black 0px 2px 3px 0px;
+}
+
+.box-info span {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.produtos .div-produto img {
+  width: 100px;
+  height: 100px;
+  filter: brightness(0);
+  transition: transform 0.3s ease;
+}
 
   .produtos .div-produto:nth-child(1) {
     animation: brilho 2s infinite;
@@ -535,27 +586,26 @@
     background-attachment: fixed;
     content: "";
     position: absolute;
-    inset: 0; /* ocupa todo o espaço */
+    inset: 0; 
     background-image: url("assets/fotos-redimensionadas/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    filter: grayscale(45%);
+    filter: grayscale(10%);
+    filter: brightness(40%);
     opacity: 0.8; 
     z-index: -1;
   }
 
   .div-produto a {
-    position: relative;
-    text-decoration: none;
-    color: var(--secundary);
-    font-weight: 500;
-    padding: 0.5rem 0.8rem;
-    border-radius: var(--radius);
-    box-shadow: #000 0px 2px 3px 0px;
-    width: 100%;
-    margin: 10px;
-    background-color: var(--primary);
+  text-decoration: none;
+  width: 100%;
+  display: flex;       
+  justify-content: center;
+  background: transparent; 
+  padding: 0;          
+  box-shadow: none;    
+  border-radius: var(--radius);
   }
 
   .div-produto a::after {
@@ -607,6 +657,15 @@
       0 0 6px rgba(255, 0, 0, 0.9),
       0 0 16px rgba(255, 60, 60, 0.9),
       0 0 32px rgba(255, 120, 120, 0.8);
+  }
+
+  .div-produto a:hover .box-info {
+    transform: scale(1.05); 
+    background: var(--gradient-light); 
+    box-shadow:
+      0 0 8px rgba(255, 0, 0, 0.9),
+      0 0 16px rgba(255, 60, 60, 0.9);
+    transition: all 0.3s ease;
   }
 
 
