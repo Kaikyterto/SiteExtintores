@@ -987,11 +987,11 @@
 }
 
 .titulo-saibamais {
-  width: 100%;           /* Ocupa toda largura do pai */
-  text-align: center;    /* Centraliza o texto */
-  margin: 0 0 40px 0;    /* Margem embaixo para separar do conteúdo */
-  font-size: 2.5rem;     /* Tamanho do texto (ajuste se quiser) */
+  width: 100%;           
+  text-align: center;    
+  margin: 0 0 40px 0;    
+  font-size: 2.5rem;     
   font-weight: bold;
-  color: #C8102E;        /* Cor que combine */
+  color: #C8102E;        
 }
 
