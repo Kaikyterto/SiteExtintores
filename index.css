@@ -454,11 +454,11 @@
     width: fit-content;
     max-width: 100%;
   
-    color: #ff0000;
-    animation: attention 2s infinite;
+    background-color: #ff0000;
+    color: var(--secundary);
+    animation: brilho 2s infinite;
     transition: all 0.3s ease;
   
-    border: 5px solid rgba(220, 38, 38, 0.25);
     border-radius: var(--radius);
     padding: 0.6em 1.2em;
   
@@ -875,6 +875,14 @@
   
   .hero span {
     font-size: 1.2rem;
+  }
+
+  .slide .title {
+    font-size: 0.9rem;
+  }
+
+  .slide .description {
+    font-size: 0.7rem;
   }
   
 }
