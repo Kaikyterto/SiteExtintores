@@ -965,3 +965,33 @@
   }
   
 }
+
+/* Adicionais para o saibamais */
+
+.saibamais{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: calc(50% - 30px);
+  height: 80vh;
+  gap: 30px;
+}
+
+#section-saibamais{
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 120px;
+}
+
+.titulo-saibamais {
+  width: 100%;           /* Ocupa toda largura do pai */
+  text-align: center;    /* Centraliza o texto */
+  margin: 0 0 40px 0;    /* Margem embaixo para separar do conteúdo */
+  font-size: 2.5rem;     /* Tamanho do texto (ajuste se quiser) */
+  font-weight: bold;
+  color: #C8102E;        /* Cor que combine */
+}
+
