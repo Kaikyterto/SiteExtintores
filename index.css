@@ -717,8 +717,15 @@
   }
 
   .about p{
-    font-size: 18px;
+    font-family: 'DM Sans', sans-serif; 
+    font-size: 1.125rem; 
+    font-weight: 400;
+    line-height: 1.7; 
+    letter-spacing: 0.02em; 
+    opacity: 0.95; 
+    text-align: left;
     text-align: justify;
+    hyphens: auto;
   }
 
   .footer {
@@ -775,10 +782,11 @@
   }
 
   .contact-label {
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 1px;
     text-transform: uppercase;
     min-width: 90px;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     font-family: 'Playfair Display', serif;
   }
 
@@ -787,6 +795,10 @@
     border-bottom: 1.5px solid rgba(255, 255, 255, 0.6);
     padding-bottom: 5px;
     font-size: 1rem;
+    font-weight: 400;
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.6;
+    opacity: 0.9;
   }
 
   .footer-bottom {
@@ -796,6 +808,10 @@
     padding-top: 20px;
     font-size: 0.75rem;
     opacity: 0.7;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    font-weight: 300;
   }
 
   .footer-bottom {
