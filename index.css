@@ -1236,24 +1236,34 @@
       max-width: 300px; 
   }
 
-  @media (hover: none) and (pointer: coarse) {
-    
-    .slide:hover .overlay {
-      height: 50px;
-    }
-
-    .slide:hover .description {
-      opacity: 0;
-    }
-
-    .slide:active .overlay {
-      height: 175px;
-    }
-
-    .slide:active .description {
-      opacity: 1;
-    }
+  #big-icon-whatsapp:hover .tooltip {
+    display: none !important;
   }
+
+@media (hover: none) and (pointer: coarse) {
+
+  .slide:hover .overlay {
+    height: 50px;
+  }
+
+  .slide:hover .description {
+    opacity: 0;
+  }
+
+
+  .slide.is-active .overlay {
+    height: 175px;
+  }
+
+  .slide.is-active .description {
+    opacity: 1;
+  }
+
+ 
+
+}
+
+
 
 }
 
