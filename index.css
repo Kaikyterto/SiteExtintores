@@ -432,6 +432,12 @@
     animation: autoRun 10s linear infinite;
   }
 
+  @media (max-width: 768px) {
+    .slider .list{
+      animation: autoRun 20s linear infinite;
+    }
+  }
+
   .slider .list .item{
     width: var(--width);
     height: var(--heigth);
