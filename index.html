@@ -327,21 +327,24 @@
     nav.classList.toggle('active');
   });
 
-  slides.forEach(slide => {
-    slide.addEventListener('click', (e) => {
-      e.stopPropagation();
+  track.addEventListener('click', (e) => {
+  const slide = e.target.closest('.slide');
+  if (!slide) return;
 
-      slides.forEach(s => {
-        if (s !== slide) s.classList.remove('is-active');
-      });
+  e.stopPropagation();
 
-      slide.classList.toggle('is-active');
-    });
+  document.querySelectorAll('.slide').forEach(s => {
+    if (s !== slide) s.classList.remove('is-active');
   });
 
-  document.addEventListener('click', () => {
-    slides.forEach(slide => slide.classList.remove('is-active'));
-  });
+  slide.classList.toggle('is-active');
+});
+
+
+document.addEventListener('click', () => {
+  document.querySelectorAll('.slide.is-active').forEach(slide => slide.classList.remove('is-active'));
+});
+
 
 </script>
 </html>

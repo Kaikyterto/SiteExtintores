@@ -21,7 +21,11 @@ nextBtn.addEventListener("click", () => {
   if (currentPage + 1 >= numPages) {
     const clones = slides
       .slice(0, slidesToShow)
-      .map(slide => slide.cloneNode(true));
+      .map((slide) => {
+        const slideClone = slide.cloneNode(true);
+        slideClone.classList.add('slide');
+        return slideClone;
+      });
 
     for (let i = 0; i < slidesToShow; i++) {
       slides[i].remove();
